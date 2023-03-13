@@ -14,7 +14,7 @@ class ShopApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Shop',
       theme: ThemeData.light().copyWith(
-
+        
       ),
       routerConfig:AppRouter.router
     );

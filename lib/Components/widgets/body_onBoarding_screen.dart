@@ -1,10 +1,14 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, depend_on_referenced_packages
 
 import 'package:flutter/material.dart';
 import 'package:shop_app/Components/components/srokeText.dart';
+import 'package:shop_app/Components/constants/app_router.dart';
 import 'package:shop_app/Components/styles/colors.dart';
 import 'package:shop_app/Components/widgets/image_onBoarding.dart';
+import 'package:go_router/go_router.dart';
 
+import '../components/material_button.dart';
+import '../styles/styles.dart';
 class BodyOnBoardingScreen extends StatelessWidget {
   const BodyOnBoardingScreen({super.key});
 
@@ -70,27 +74,18 @@ class BodyOnBoardingScreen extends StatelessWidget {
           ),
           Text(
             'Enjoy your vacation with our super comfy shoes',
-            style: TextStyle(color: MyColors.thirdColor, fontSize: 22),
+            style: TextStyle(color: MyColors.textSecondary, fontSize: 22),
           ),
-          Spacer(),
-          Padding(
+          const Spacer(),
+          myButton(
             padding: const EdgeInsets.symmetric(horizontal: 22),
-            child: Container(
-              height: 60,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                color: MyColors.primaryColor,
-              ),
-              child: MaterialButton(
-                onPressed: () {},
-                child: Text(
-                  'Get Started',
-                  style: TextStyle(color: MyColors.white, fontSize: 18),
-                ),
-              ),
-            ),
-          ),
+             backgroundColor: MyColors.primaryColor,
+              data: 'Get Started',
+             style:Styles.styleButton,
+             onPressed: (){
+              GoRouter.of(context).push(AppRouter.KLogingScreen);
+             }
+          ),     
         ],
       ),
     );
