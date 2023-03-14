@@ -1,10 +1,14 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
-import 'package:shop_app/Components/components/my_textform_field.dart';
 import 'package:shop_app/Components/constants/app_router.dart';
 import 'package:shop_app/Components/styles/colors.dart';
 import 'package:shop_app/Components/styles/styles.dart';
 import 'package:go_router/go_router.dart';
 import '../../../Components/components/material_button.dart';
+import '../../../Components/widgets/text_form_fieldPassword.dart';
+import '../../../Components/widgets/text_form_field_email.dart';
+import '../../../Components/widgets/text_form_field_username.dart';
 
 class SingInSectionForm extends StatefulWidget {
   const SingInSectionForm({super.key});
@@ -54,55 +58,34 @@ class _SingInSectionFormState extends State<SingInSectionForm> {
                 style: Styles.grayText,
               ),
               const SizedBox(height: 20),
-              myTextFormField(
-                onChanged: (p0) {
-                  userValue = p0;
-                },
-                controller: userNameController,
-                keyboardType: TextInputType.text,
-                validator: (value) {
-                  if (value!.isEmpty) {
-                    return 'userName must not be empty';
-                  }
-                  return null;
-                },
-                keyboardAppearance: Brightness.light,
-                fillColor: MyColors.fillcolor,
-                hintStyle: Styles.hintStyle,
-                hintText: 'enter your username',
-              ), //
+              usernameField(onChanged: (value){
+                userValue=value;
+              }, controller: userNameController), //
               const SizedBox(height: 20),
               Text(
                 'Email',
                 style: Styles.grayText,
               ),
               const SizedBox(height: 20),
-              myTextFormField(
-                onChanged: (p0) {
-                  emailValue = p0;
-                },
-                controller: emailController,
-                keyboardType: TextInputType.emailAddress,
-                validator: (value) {
-                  if (value!.isEmpty) {
-                    return 'email address must not be empty';
-                  }
-                  return null;
-                },
-                keyboardAppearance: Brightness.light,
-                fillColor: MyColors.fillcolor,
-                hintStyle: Styles.hintStyle,
-                hintText: 'enter your email',
-              ), //
+              emailField(onChanged:  (value){
+                emailValue=value;
+              }, controller: emailController), //
               const SizedBox(height: 20),
               Text(
                 'Password',
                 style: Styles.grayText,
               ),
               const SizedBox(height: 20),
-              myTextFormField(
-                onFieldSubmitted: (value){
-                  if(value.isNotEmpty)
+             passwordField(
+              validator: (value) {
+                validatMsg(value!);
+                return null;
+              },
+              controller: passwordController,onChanged:(value) {
+                  passwordValue = value;
+                },
+                onFieldSubmitted: (value) {
+                   if(value.isNotEmpty)
                   {
                     isClicked=!isClicked;
                     setState(() {
@@ -110,23 +93,8 @@ class _SingInSectionFormState extends State<SingInSectionForm> {
                     });
                   }
                 },
-                onChanged: (p0) {
-                  passwordValue = p0;
-                },
-                controller: passwordController,
-                obscureText: true,
-                keyboardType: TextInputType.visiblePassword,
-                validator: (value) {
-                  if (value!.isEmpty) {
-                    return 'password must not be empty';
-                  }
-                  return null;
-                },
-                keyboardAppearance: Brightness.light,
-                fillColor: MyColors.fillcolor,
-                hintStyle: Styles.hintStyle,
-                hintText: 'enter your password',
-              ),
+                ),
+            
               const SizedBox(height: 20),
 
 //               Row(
@@ -159,7 +127,7 @@ class _SingInSectionFormState extends State<SingInSectionForm> {
 // //
 
               myButton(
-                  padding: const EdgeInsets.symmetric(horizontal: 22),
+               
                   backgroundColor:
                       isClicked ? Colors.blue : MyColors.primaryColor,
                   data: 'Sing In',
@@ -182,4 +150,8 @@ class _SingInSectionFormState extends State<SingInSectionForm> {
       ),
     );
   }
+
+ 
+
+
 }

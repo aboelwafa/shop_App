@@ -78,7 +78,6 @@ class BodyOnBoardingScreen extends StatelessWidget {
           ),
           const Spacer(),
           myButton(
-            padding: const EdgeInsets.symmetric(horizontal: 22),
              backgroundColor: MyColors.primaryColor,
               data: 'Get Started',
              style:Styles.styleButton,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/Components/styles/styles.dart';
 
+import '../../../Components/components/title.dart';
 import '../../../Components/widgets/custom_google_button.dart';
 
 class SingInSectionOne extends StatelessWidget {
@@ -11,25 +11,15 @@ class SingInSectionOne extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-          Center(
-              child: Text(
-            'SING IN',
-            style: Styles.style22,
-          )),
+           myTitle(text: 'SING IN'),     
           const SizedBox(
-            height: 71,
+            height: 50,
           ),
-          Text(
-            'Create and Account',
-            style: Styles.style24,
-          ),
+          subTitle(text: 'Create and Account'),
           const SizedBox(
             height: 20,
           ),
-          Text(
-            'Enter password to get back your account!',
-            style: Styles.style21,
-          ),
+          miSubTitle(text: 'Enter password to get back your account!'),
           const SizedBox(height: 20),
           const CustomGoogleButton(),
           const SizedBox(

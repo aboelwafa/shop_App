@@ -9,11 +9,6 @@ abstract class Styles
     fontWeight: FontWeight.bold,
     color: MyColors.textPrimary
   );
-  static TextStyle style18= TextStyle(
-    fontSize: 18,
-    fontWeight: FontWeight.w300,
-    color: MyColors.textPrimary
-  );
   static TextStyle style24= TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.w700,

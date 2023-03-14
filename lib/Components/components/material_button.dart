@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/Components/styles/colors.dart';
-
 Widget myButton({
-  required EdgeInsetsGeometry padding,
+   EdgeInsetsGeometry padding=const EdgeInsets.symmetric(horizontal: 22),
   double height=60,
   double raduis=50,
     double width=double.infinity,
-   required Color backgroundColor,
+required Color backgroundColor,
 required String data,
 required TextStyle style,
 required void Function() onPressed,

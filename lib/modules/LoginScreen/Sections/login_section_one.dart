@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/Components/styles/styles.dart';
 
+import '../../../Components/components/title.dart';
 import '../../../Components/widgets/custom_google_button.dart';
 
 class LoginSectionOne extends StatelessWidget {
@@ -11,25 +11,15 @@ class LoginSectionOne extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-          Center(
-              child: Text(
-            'LOG IN',
-            style: Styles.style22,
-          )),
+         myTitle(text: 'LOG IN'), 
           const SizedBox(
             height: 71,
           ),
-          Text(
-            'Welcome Back!',
-            style: Styles.style24,
-          ),
+         subTitle(text: 'Welcome Back!'),
           const SizedBox(
             height: 20,
           ),
-          Text(
-            'Enter password to get back your account!',
-            style: Styles.style21,
-          ),
+          miSubTitle(text:  'Enter password to get back your account!'),
           const SizedBox(height: 20),
           const CustomGoogleButton(),
           const SizedBox(

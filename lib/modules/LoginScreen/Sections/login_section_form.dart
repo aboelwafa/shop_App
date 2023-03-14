@@ -1,10 +1,14 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
-import 'package:shop_app/Components/components/my_textform_field.dart';
 import 'package:shop_app/Components/constants/app_router.dart';
 import 'package:shop_app/Components/styles/colors.dart';
 import 'package:shop_app/Components/styles/styles.dart';
 import 'package:go_router/go_router.dart';
 import '../../../Components/components/material_button.dart';
+import '../../../Components/components/title.dart';
+import '../../../Components/widgets/text_form_fieldPassword.dart';
+import '../../../Components/widgets/text_form_field_email.dart';
 
 class LoginSectionForm extends StatefulWidget {
   const LoginSectionForm({super.key});
@@ -47,54 +51,30 @@ class _LoginSectionFormState extends State<LoginSectionForm> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'Email',
-                style: Styles.grayText,
-              ),
+              infoTitle(text: 'Email'),
               const SizedBox(height: 20),
-              myTextFormField(
-                onChanged: (p0) {
-                  emailValue = p0;
-                },
-                controller: emailController,
-                keyboardType: TextInputType.emailAddress,
-                validator: (value) {
-                  if (value!.isEmpty) {
-                    return 'email address must not be empty';
-                  }
-                  return null;
-                },
-                keyboardAppearance: Brightness.light,
-                fillColor: MyColors.fillcolor,
-                hintStyle: Styles.hintStyle,
-                hintText: 'enter your email',
-              ), //
-
+              emailField(
+                  onChanged: (value) {
+                    emailValue = value;
+                  },
+                  controller: emailController),
               const SizedBox(
                 height: 40,
               ),
-              Text(
-                'Password',
-                style: Styles.grayText,
-              ),
+              infoTitle(text: 'Password'),
               const SizedBox(height: 20),
-              myTextFormField(
-                onChanged: (p0) {
-                  passwordValue = p0;
+              passwordField(
+                validator: (value) 
+                {
+                  if(value!.isEmpty)
+                  {
+                    return 'the password field must not be empty';
+                  }  
                 },
                 controller: passwordController,
-                obscureText: true,
-                keyboardType: TextInputType.visiblePassword,
-                validator: (value) {
-                  if (value!.isEmpty) {
-                    return 'password must not be empty';
-                  }
-                  return null;
+                onChanged: (value) {
+                  passwordValue = value;
                 },
-                keyboardAppearance: Brightness.light,
-                fillColor: MyColors.fillcolor,
-                hintStyle: Styles.hintStyle,
-                hintText: 'enter your password',
               ),
               const SizedBox(height: 25),
               Row(
@@ -121,13 +101,20 @@ class _LoginSectionFormState extends State<LoginSectionForm> {
                   Text(
                     'Remember me',
                     style: Styles.style21.copyWith(fontSize: 18),
-                  )
+                  ),
+                  const SizedBox(
+                    width: 15,
+                  ),
+                  TextButton(
+                      onPressed: () {
+                        GoRouter.of(context).push(AppRouter.KforgetScreen);
+                      },
+                      child: const Text('Forget Password?'))
                 ],
               ),
-
               const SizedBox(height: 20),
               myButton(
-                  padding: const EdgeInsets.symmetric(horizontal: 22),
+                 
                   backgroundColor:
                       isClicked ? Colors.blue : MyColors.primaryColor,
                   data: 'Log In',

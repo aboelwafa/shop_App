@@ -9,7 +9,7 @@ class SingInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: MyColors.white,
-      body: BodySingIn(),
+      body: const BodySingIn(),
     );
   }
 }
