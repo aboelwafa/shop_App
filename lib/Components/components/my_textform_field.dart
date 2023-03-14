@@ -13,8 +13,10 @@ Widget myTextFormField({
     TextStyle? hintStyle,
 double hintTextsize=20,
 bool obscureText = false,
-void Function(String)? onChanged  
+void Function(String)? onChanged  ,
+void Function(String)? onFieldSubmitted
 })=>TextFormField(
+  onFieldSubmitted:onFieldSubmitted ,
             obscureText: obscureText,
             onChanged:onChanged ,
             controller: controller,

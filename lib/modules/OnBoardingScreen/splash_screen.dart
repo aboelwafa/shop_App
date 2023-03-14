@@ -53,7 +53,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void navigateToOnBoarding()
   {
-    Future.delayed(const Duration(seconds: 3),() {
+    Future.delayed(const Duration(seconds: 2),() {
       GoRouter.of(context).push(AppRouter.KOnBoardingScreen);
     },);
 
