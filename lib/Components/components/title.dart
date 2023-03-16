@@ -19,3 +19,7 @@ Widget miSubTitle({required String text}) => Text(
                 style: Styles.grayText,
               );
 
+Widget startTitle({required String text}) => Text(
+      text,
+      style: Styles.style22,
+    );

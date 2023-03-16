@@ -78,7 +78,10 @@ class _SingInSectionFormState extends State<SingInSectionForm> {
               const SizedBox(height: 20),
              passwordField(
               validator: (value) {
-                validatMsg(value!);
+                if(value!.isEmpty)
+                {
+                  return'the field must not be empty';
+                }
                 return null;
               },
               controller: passwordController,onChanged:(value) {

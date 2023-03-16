@@ -26,13 +26,6 @@ Widget passwordField({
               hintStyle: Styles.hintStyle,
               hintText: hintText,
             );
-  }
-
-String? validatMsg(String value)
-{
-  if(value.isEmpty)
-  {
-    return 'password must not be empty';
-  }
-  
 }
+
+

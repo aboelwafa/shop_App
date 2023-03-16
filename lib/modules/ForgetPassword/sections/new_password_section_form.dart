@@ -38,7 +38,8 @@ class NewpasswordSectionForm extends StatelessWidget {
                   if(value!.isEmpty)
                   {
                     return 'the password field must not be empty';
-                  } 
+                  }
+                  return null; 
                 }, 
                 onChanged:(value) {
       

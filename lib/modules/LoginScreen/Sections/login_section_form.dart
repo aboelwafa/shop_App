@@ -69,7 +69,8 @@ class _LoginSectionFormState extends State<LoginSectionForm> {
                   if(value!.isEmpty)
                   {
                     return 'the password field must not be empty';
-                  }  
+                  }
+                  return null;  
                 },
                 controller: passwordController,
                 onChanged: (value) {
@@ -122,7 +123,7 @@ class _LoginSectionFormState extends State<LoginSectionForm> {
                   style: Styles.styleButton,
                   onPressed: () {
                     if (formKey.currentState!.validate()) {
-                      GoRouter.of(context).push(AppRouter.KsingInScreen);
+                      GoRouter.of(context).push(AppRouter.KHomeLayout);
                       emailController.clear();
                       passwordController.clear();
                       isClicked = false;
