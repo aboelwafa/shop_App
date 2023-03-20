@@ -1,6 +1,8 @@
 // ignore_for_file: constant_identifier_names, unused_field, depend_on_referenced_packages
 
 import 'package:go_router/go_router.dart';
+import 'package:shop_app/modules/Home&filter/details_screen.dart';
+import 'package:shop_app/modules/Home&filter/discover_screen.dart';
 import 'package:shop_app/modules/Home&filter/home_screen.dart';
 import 'package:shop_app/modules/LoginScreen/login_screen.dart';
 import 'package:shop_app/modules/LoginScreen/sing_in_screen.dart';
@@ -20,9 +22,11 @@ abstract class AppRouter{
   static const String KresetScreen='/ResetPasswordScreen';
   static const String KHomeScreen='/HomeScreen';
   static const String KHomeLayout='/HomeLayoutScreen';
+  static const String KDetailsScreen='/DetailsScreen';
+static const String KDiscoverScreen='/DiscoverScreen';
 
 
-//HomeLayoutScreen
+//DetailsScreen
   static final  router = GoRouter(
   routes: [
     GoRoute(
@@ -51,12 +55,21 @@ abstract class AppRouter{
     ),
      GoRoute(
       path: KHomeLayout,
-      builder: (context, state) =>  HomeLayoutScreen(),
+      builder: (context, state) =>  const HomeLayoutScreen(),
     ),
     // homescreen
      GoRoute(
       path: KHomeScreen,
-      builder: (context, state) =>  HomeScreen(),
+      builder: (context, state) =>  const HomeScreen(),
+    ),
+    // detail
+      GoRoute(
+      path: KDetailsScreen,
+      builder: (context, state) => const DetailsScreen(),
+    ),
+      GoRoute(
+      path: KDiscoverScreen,
+      builder: (context, state) => const DiscoverScreen(),
     ),
   ],
 );

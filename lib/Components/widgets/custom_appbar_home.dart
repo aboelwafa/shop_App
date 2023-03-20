@@ -1,14 +1,23 @@
+// ignore_for_file: non_constant_identifier_names, must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:shop_app/Components/components/title.dart';
 import 'package:shop_app/Components/styles/colors.dart';
 
 class CustomAppBarHome extends StatelessWidget {
-  const CustomAppBarHome({super.key});
+   CustomAppBarHome({super.key,required this.title,required this.icon1,this.LeadOnPress,this.sunOnPress,this.darkOnPress});
+  String title;
+  IconData icon1;
+   
+  void Function()? LeadOnPress;
+  void Function()? sunOnPress;
+  void Function()? darkOnPress;
+
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 30,right: 15),
+      padding: const EdgeInsets.only( top: 30,right: 15),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -20,12 +29,12 @@ class CustomAppBarHome extends StatelessWidget {
               backgroundColor: MyColors.white,
               child: Center(
                   child: IconButton(
-                icon: Icon(Icons.apps, color: MyColors.textPrimary, size: 30),
-                onPressed: () {},
+                icon: Icon(icon1 , color: MyColors.textPrimary, size: 30),
+                onPressed: LeadOnPress,
               )),
             ),
           ),
-          myTitle(text: 'HOME'),
+          myTitle(text: title),
           Container(
             width: 140,
             height: 60,
@@ -38,9 +47,9 @@ class CustomAppBarHome extends StatelessWidget {
             child: Row(
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: (){},
                   style: ElevatedButton.styleFrom(
-                    fixedSize: Size(30, 50),
+                    fixedSize: const Size(30, 50),
     
                     elevation: 0.0,
                     backgroundColor: MyColors.yellow,
@@ -57,9 +66,9 @@ class CustomAppBarHome extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: (){},
                   style: ElevatedButton.styleFrom(
-                    fixedSize: Size(30, 50),
+                    fixedSize: const Size(30, 50),
                     elevation: 0.0,
                     backgroundColor: MyColors.white,
                     shape: const CircleBorder(), //<-- SEE HERE

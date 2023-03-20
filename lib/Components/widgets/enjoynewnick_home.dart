@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:shop_app/Components/styles/colors.dart';
+import 'package:shop_app/Components/widgets/build_container_bottom_sheet.dart';
 
 class EnjoyNewNick extends StatelessWidget {
   const EnjoyNewNick({super.key});
@@ -21,6 +22,7 @@ class EnjoyNewNick extends StatelessWidget {
                 fontSize: 24,
                 fontWeight: FontWeight.w400,
               ),),
+               
                Text('Products',style: TextStyle(
                 color: MyColors.textPrimary,
                 fontSize: 24,
@@ -46,11 +48,25 @@ class EnjoyNewNick extends StatelessWidget {
               spreadRadius:1
             )]
               ),
-              child: IconButton(icon:Icon(Icons.more_horiz,color: MyColors.white,size: 35,),onPressed: (){},),
+              child: IconButton(icon:Icon(Icons.more_horiz,color: MyColors.white,size: 35,),
+              onPressed: (){
+               _moreModalBottomSheet(context);
+              },),
             ) 
         ],
       ),
     );
+  }
+  _moreModalBottomSheet(context) {
+    showModalBottomSheet(
+        isScrollControlled: true,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(40.0),
+        ),
+        context: context,
+        builder: (BuildContext bc) {
+          return ContainerBottomSheet();
+        });
   }
 }
 // 

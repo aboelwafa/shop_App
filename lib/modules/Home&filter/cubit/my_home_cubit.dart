@@ -17,9 +17,9 @@ class MyHomeCubit extends Cubit<MyHomeState> {
   
   List<Widget> bottomScreen=
   [
-    HomeScreen(),
-    DiscoverScreen(),
-    DetailsScreen(),
+    const HomeScreen(),
+    const DiscoverScreen(),
+    const DetailsScreen(),
   ];
 
   void changeBottom(int index)

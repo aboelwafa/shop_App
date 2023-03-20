@@ -1,28 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/Components/styles/colors.dart';
-import 'package:shop_app/modules/Home&filter/discover_screen.dart';
-
+import 'package:shop_app/Components/widgets/my_drawer.dart';
 import '../../Components/widgets/body_home_screen.dart';
-
-class HomeScreen  extends StatefulWidget {
-   HomeScreen ({super.key});
-
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen>  with SingleTickerProviderStateMixin{
-
-
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
   @override
   Widget build(BuildContext context) {
-   
-    return  Scaffold(
-
+    var size = MediaQuery.of(context).size;
+    return Scaffold(
       backgroundColor: MyColors.white,
-    
-      body:const BodyHomeScreen(),
-     
+      body: const BodyHomeScreen(),
+      drawer: myDrawer(size: size),
     );
   }
 }
