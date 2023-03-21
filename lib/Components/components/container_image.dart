@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../styles/colors.dart';
-
 Widget myContainerProduct({
   required Widget child ,
   double width=170,
@@ -24,6 +21,6 @@ Widget myContainerProduct({
   
             ),
   
-            child: Image.asset('assets/images/airMax270.png'),
+            child: child,
   
           );

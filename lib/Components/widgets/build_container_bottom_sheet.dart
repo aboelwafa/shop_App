@@ -5,8 +5,6 @@ import 'package:shop_app/Components/components/material_button.dart';
 import 'package:shop_app/Components/components/title.dart';
 import 'package:shop_app/Components/styles/colors.dart';
 import 'package:shop_app/Components/styles/styles.dart';
-
-import '../components/container_icons.dart';
 import 'bottom_sheet_container_category.dart';
 import 'bottom_sheet_container_type.dart';
 
@@ -64,11 +62,12 @@ class _ContainerBottomSheetState extends State<ContainerBottomSheet> {
                       
                     ),),
                   ],),
-                  RangersSlider(),
+                   RangersSlider(),
+                  
                   const SizedBox(height: 20,),
                   const ContainerType(),
                   const SizedBox(height: 20,),
-                 const ContainerCategory(),
+                  ContainerCategory(),
                 const SizedBox(height: 20,),
                   myButton(backgroundColor: MyColors.primaryColor, data: 'Apply', style: Styles.style21.copyWith(color: MyColors.white), onPressed: (){
                    Navigator.pop(context);

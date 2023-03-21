@@ -16,5 +16,6 @@ abstract class MyColors {
   static Color circle=HexColor('A579AD');
   static Color red=HexColor('FF5545');
   static Color grayText=HexColor('8C94A0');
+  
 
 }

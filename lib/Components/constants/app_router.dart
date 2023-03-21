@@ -8,10 +8,12 @@ import 'package:shop_app/modules/LoginScreen/login_screen.dart';
 import 'package:shop_app/modules/LoginScreen/sing_in_screen.dart';
 import 'package:shop_app/modules/OnBoardingScreen/on_boarding_screen.dart';
 import 'package:shop_app/modules/OnBoardingScreen/splash_screen.dart';
+import 'package:shop_app/modules/Search&categroy/search_screen.dart';
 
 import '../../modules/ForgetPassword/forget_password.dart';
 import '../../modules/ForgetPassword/new_password.dart';
 import '../../modules/Home&filter/home_layout.dart';
+import '../../modules/Search&categroy/category_screen.dart';
 
 abstract class AppRouter{
   static const String KSplashScreen='/';
@@ -23,8 +25,9 @@ abstract class AppRouter{
   static const String KHomeScreen='/HomeScreen';
   static const String KHomeLayout='/HomeLayoutScreen';
   static const String KDetailsScreen='/DetailsScreen';
-static const String KDiscoverScreen='/DiscoverScreen';
-
+  static const String KDiscoverScreen='/DiscoverScreen';
+static const String KSearchScreen='/Searchcreen';
+  static const String KCategoryScreen='/CategoryScreen';
 
 //DetailsScreen
   static final  router = GoRouter(
@@ -70,6 +73,14 @@ static const String KDiscoverScreen='/DiscoverScreen';
       GoRoute(
       path: KDiscoverScreen,
       builder: (context, state) => const DiscoverScreen(),
+    ),
+        GoRoute(
+      path: KCategoryScreen,
+      builder: (context, state) => const CategoryScreen(),
+    ),
+      GoRoute(
+      path: KSearchScreen,
+      builder: (context, state) => const Searchcreen(),
     ),
   ],
 );

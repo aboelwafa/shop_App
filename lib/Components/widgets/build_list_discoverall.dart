@@ -23,7 +23,7 @@ class BuildListDiscoverProducts extends StatelessWidget {
       mainAxisSpacing: 10,
       childAspectRatio: 1.0 / 1.8,
       children: List.generate(
-        4, (index) =>myList(context)),
+       4 , (index) =>myList(context)),
     );
   }
 }

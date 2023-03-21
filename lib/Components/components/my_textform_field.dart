@@ -14,7 +14,14 @@ Widget myTextFormField({
 double hintTextsize=20,
 bool obscureText = false,
 void Function(String)? onChanged  ,
-void Function(String)? onFieldSubmitted
+void Function(String)? onFieldSubmitted,
+Widget? suffixIcon,
+IconData? prefixIcon,
+Color?suffixIconColor,
+Color?prefixIconColor,
+
+
+
 })=>TextFormField(
   onFieldSubmitted:onFieldSubmitted ,
             obscureText: obscureText,
@@ -33,6 +40,11 @@ void Function(String)? onFieldSubmitted
               fillColor: fillColor,
               border: outlineInputBorder(),
               focusedBorder:outlineInputBorder() ,
+              suffixIcon:suffixIcon ,
+              prefixIcon: Icon(prefixIcon),
+              suffixIconColor: suffixIconColor,
+              prefixIconColor: prefixIconColor,
+              
             ),
           );
           

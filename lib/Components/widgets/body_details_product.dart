@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/Components/components/navigator.dart';
+import 'package:shop_app/Components/constants/app_router.dart';
 
 import '../styles/colors.dart';
 import 'custom_appbar_home.dart';
@@ -161,7 +163,9 @@ class DetailsSectionTwo extends StatelessWidget {
                     ),
                     ),
                     const SizedBox(height: 30,),
-                    TextButton(onPressed: (){}, child: Text('...  Details',style: TextStyle(
+                    TextButton(onPressed: (){
+                     navigatorPush(context, pathAppRouter: AppRouter.KSearchScreen);
+                    }, child: Text('...  Details',style: TextStyle(
                       color: MyColors.primaryColor,
                       fontSize: 22,
                     ),)
