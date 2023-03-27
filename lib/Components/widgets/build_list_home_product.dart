@@ -1,12 +1,9 @@
 
 // ignore_for_file: depend_on_referenced_packages
-
-import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 import 'package:shop_app/Components/components/navigator.dart';
 import 'package:shop_app/Components/components/title.dart';
 import 'package:shop_app/Components/styles/colors.dart';
-
 import '../components/container_image.dart';
 import '../constants/app_router.dart';
 

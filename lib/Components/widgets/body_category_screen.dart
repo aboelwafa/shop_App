@@ -11,13 +11,13 @@ class BodyCategoryScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
       child: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children:const [
             MainSectionCategory(),
             SizedBox(height: 35,),
-            buildSectionListProduct(),
+            BuildSectionListProduct(),
           ],
         ),
       ),

@@ -10,7 +10,7 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.white,
-      body: BodyCartScreen(),
+      body: const BodyCartScreen(),
     );
   }
 }

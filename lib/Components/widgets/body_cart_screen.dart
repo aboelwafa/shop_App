@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shop_app/Components/components/title.dart';
 import 'package:shop_app/Components/styles/styles.dart';
 
-import '../components/container_image.dart';
-import '../components/elvated_button.dart';
 import '../components/material_button.dart';
 import '../styles/colors.dart';
 import 'build_list_cart_product.dart';
@@ -27,7 +25,7 @@ class BodyCartScreen extends StatelessWidget {
             },
             iconAction: Icons.notifications_none_outlined,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Text(
@@ -38,7 +36,7 @@ class BodyCartScreen extends StatelessWidget {
               fontWeight: FontWeight.w400,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Text(
@@ -49,20 +47,20 @@ class BodyCartScreen extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          BuildListCartProduct(),
-          SizedBox(
+          const BuildListCartProduct(),
+          const SizedBox(
             height: 15,
           ),
-          BuildListCartProduct(),
-          SizedBox(
+          const BuildListCartProduct(),
+          const SizedBox(
             height: 20,
           ),
           // Do You Have Any Voucher?
         Center(child: infoTitle(text: 'Do You Have Any Voucher?')),
-        SizedBox(
+        const SizedBox(
             height: 20,
           ),
         Row(
@@ -80,7 +78,7 @@ class BodyCartScreen extends StatelessWidget {
                
           ],
         ),
-             Expanded(
+             const Expanded(
                child: SizedBox(
                          height: 25,
                        ),
@@ -88,7 +86,7 @@ class BodyCartScreen extends StatelessWidget {
                       myButton(backgroundColor: MyColors.primaryColor, 
                       data: 'Checkout', style: Styles.styleButton, onPressed: (){}),
 
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
         ],

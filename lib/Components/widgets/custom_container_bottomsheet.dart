@@ -1,4 +1,4 @@
-// ignore_for_file: non_constant_identifier_names, avoid_types_as_parameter_names
+// ignore_for_file: non_constant_identifier_names, avoid_types_as_parameter_names, duplicate_ignore
 
 import 'package:flutter/material.dart';
 import 'package:shop_app/Components/widgets/ranger_slider.dart';
@@ -7,10 +7,6 @@ import '../components/material_button.dart';
 import '../components/title.dart';
 import '../styles/colors.dart';
 import '../styles/styles.dart';
-import 'bottom_sheet_container_category.dart';
-import 'bottom_sheet_container_type.dart';
-import 'bottom_sheet_container_type.dart';
-
 // ignore: duplicate_ignore, duplicate_ignore
 Widget myContainerBottomSheet(context,{
       required double heightContainer,

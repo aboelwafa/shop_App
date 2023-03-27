@@ -10,7 +10,7 @@ class CategoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.white,
-      body:BodyCategoryScreen() ,
+      body:const BodyCategoryScreen() ,
     );
   }
 }

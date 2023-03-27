@@ -20,7 +20,7 @@ class BuildListCartProduct extends StatelessWidget {
                       child: Image.asset('assets/images/cat1.png'),
                       backgroundColor: MyColors.fillcolor),
                   
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                  
@@ -35,7 +35,7 @@ class BuildListCartProduct extends StatelessWidget {
                           fontWeight: FontWeight.w300,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Text(
@@ -46,7 +46,7 @@ class BuildListCartProduct extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       Row(
@@ -63,11 +63,11 @@ class BuildListCartProduct extends StatelessWidget {
                               onPressed: () {},
                             )),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 15,
                           ),
                           startTitle(text: '1'),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           ElevatedButton(
@@ -91,7 +91,7 @@ class BuildListCartProduct extends StatelessWidget {
                     ],
                   )
                 , 
-                Spacer(),
+                const Spacer(),
                    myContainerProduct(
                       height: 100,
                       width: 70,

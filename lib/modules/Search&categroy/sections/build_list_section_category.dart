@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:shop_app/Components/constants/app_router.dart';
 
@@ -6,8 +8,8 @@ import '../../../Components/components/material_button.dart';
 import '../../../Components/components/navigator.dart';
 import '../../../Components/styles/colors.dart';
 
-class buildSectionListProduct extends StatelessWidget {
-  const buildSectionListProduct({super.key});
+class BuildSectionListProduct extends StatelessWidget {
+  const BuildSectionListProduct({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +21,13 @@ class buildSectionListProduct extends StatelessWidget {
                 fontSize: 24,
                 fontWeight: FontWeight.w400,
               ),),
-               SizedBox(height: 15,),
+               const SizedBox(height: 15,),
                Text('Men’s',style: TextStyle(
                 color: MyColors.textPrimary,
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),),
-              SizedBox(height: 35,),
+              const SizedBox(height: 35,),
               myContainerProduct(
                 height: 150,
                 width: double.infinity,
@@ -42,13 +44,13 @@ class buildSectionListProduct extends StatelessWidget {
                   fontSize: 22,
                   fontWeight: FontWeight.w300,
                               ),),
-                              SizedBox(height: 10,),
+                              const SizedBox(height: 10,),
                   Text('USD 70.87',style: TextStyle(
                   color: MyColors.textPrimary,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                               ),),
-                              SizedBox(height: 10,),
+                              const SizedBox(height: 10,),
                               myButton(
                   width: 70,
                   height: 30,
@@ -65,7 +67,7 @@ class buildSectionListProduct extends StatelessWidget {
                   ),
                 ), 
               backgroundColor: MyColors.fillcolor),
-              SizedBox(height: 15,),
+              const SizedBox(height: 15,),
               myContainerProduct(
                 height: 150,
                 width: double.infinity,
@@ -82,13 +84,13 @@ class buildSectionListProduct extends StatelessWidget {
                   fontSize: 22,
                   fontWeight: FontWeight.w300,
                               ),),
-                              SizedBox(height: 10,),
+                              const SizedBox(height: 10,),
                   Text('USD 70.87',style: TextStyle(
                   color: MyColors.textPrimary,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                               ),),
-                              SizedBox(height: 10,),
+                              const SizedBox(height: 10,),
                               myButton(
                   width: 70,
                   height: 30,
@@ -103,7 +105,7 @@ class buildSectionListProduct extends StatelessWidget {
                   ),
                 ), 
               backgroundColor: MyColors.fillcolor),
-              SizedBox(height: 15,),
+              const SizedBox(height: 15,),
               myContainerProduct(
                 height: 150,
                 width: double.infinity,
@@ -120,13 +122,13 @@ class buildSectionListProduct extends StatelessWidget {
                   fontSize: 22,
                   fontWeight: FontWeight.w300,
                               ),),
-                              SizedBox(height: 10,),
+                              const SizedBox(height: 10,),
                   Text('USD 70.87',style: TextStyle(
                   color: MyColors.textPrimary,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                               ),),
-                              SizedBox(height: 10,),
+                              const SizedBox(height: 10,),
                               myButton(
                   width: 70,
                   height: 30,
@@ -141,7 +143,7 @@ class buildSectionListProduct extends StatelessWidget {
                   ),
                 ), 
               backgroundColor: MyColors.fillcolor),
-              SizedBox(height: 15,),
+              const SizedBox(height: 15,),
       ],
     );
   }

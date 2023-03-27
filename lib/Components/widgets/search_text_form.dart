@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 
 import '../components/my_textform_field.dart';
@@ -18,6 +20,7 @@ var searchController=TextEditingController();
           {
             return 'should write any word';
           }
+          return null;
         },
         fill: true,
          fillColor: MyColors.fillcolor,
@@ -27,7 +30,7 @@ var searchController=TextEditingController();
          prefixIconColor: MyColors.textPrimary,
          suffixIcon:IconButton(icon: const Icon(Icons.app_registration_rounded),
          onPressed: (){
-           ModelBottomSheet.moreModalBottomSheet(context, Widgetbuilder:ContainerBottomSheet());
+           ModelBottomSheet.moreModalBottomSheet(context, Widgetbuilder:const ContainerBottomSheet());
          },
          ),
          suffixIconColor: MyColors.red,

@@ -4,7 +4,7 @@ import 'package:shop_app/Components/components/title.dart';
 import 'package:shop_app/Components/styles/colors.dart';
 
 class ContainerCategory extends StatelessWidget {
-   ContainerCategory({super.key});
+   const ContainerCategory({super.key});
 
   @override
   Widget build(BuildContext context) {

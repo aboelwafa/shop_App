@@ -22,7 +22,7 @@ class LastSeenSearcScreenhSection extends StatelessWidget {
         height: 100.0,
         child: ListView.builder( 
           
-          physics: ClampingScrollPhysics(),
+          physics:const ClampingScrollPhysics(),
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
           itemCount: 15,

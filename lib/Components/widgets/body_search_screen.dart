@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/Components/styles/colors.dart';
-import 'package:shop_app/Components/widgets/custom_appbar_discover.dart';
-
 import '../../modules/Search&categroy/sections/last_search_section_search.dart';
 import '../../modules/Search&categroy/sections/last_seen_section_search.dart';
 import '../../modules/Search&categroy/sections/main_section_search.dart';
-import '../components/my_textform_field.dart';
 
 class BodySearchScreen extends StatelessWidget {
   const BodySearchScreen({super.key});

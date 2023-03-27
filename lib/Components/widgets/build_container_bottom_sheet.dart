@@ -67,7 +67,7 @@ class _ContainerBottomSheetState extends State<ContainerBottomSheet> {
                   const SizedBox(height: 20,),
                   const ContainerType(),
                   const SizedBox(height: 20,),
-                  ContainerCategory(),
+                  const ContainerCategory(),
                 const SizedBox(height: 20,),
                   myButton(backgroundColor: MyColors.primaryColor, data: 'Apply', style: Styles.style21.copyWith(color: MyColors.white), onPressed: (){
                    Navigator.pop(context);
