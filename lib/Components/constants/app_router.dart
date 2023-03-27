@@ -10,6 +10,7 @@ import 'package:shop_app/modules/OnBoardingScreen/on_boarding_screen.dart';
 import 'package:shop_app/modules/OnBoardingScreen/splash_screen.dart';
 import 'package:shop_app/modules/Search&categroy/search_screen.dart';
 
+import '../../modules/Cart&order/cart_screen.dart';
 import '../../modules/ForgetPassword/forget_password.dart';
 import '../../modules/ForgetPassword/new_password.dart';
 import '../../modules/Home&filter/home_layout.dart';
@@ -28,8 +29,9 @@ abstract class AppRouter{
   static const String KDiscoverScreen='/DiscoverScreen';
 static const String KSearchScreen='/Searchcreen';
   static const String KCategoryScreen='/CategoryScreen';
+  static const String KCartScreen='/CartScreen';
 
-//DetailsScreen
+//CartScreen
   static final  router = GoRouter(
   routes: [
     GoRoute(
@@ -81,6 +83,10 @@ static const String KSearchScreen='/Searchcreen';
       GoRoute(
       path: KSearchScreen,
       builder: (context, state) => const Searchcreen(),
+    ),
+      GoRoute(
+      path: KCartScreen,
+      builder: (context, state) => const CartScreen(),
     ),
   ],
 );

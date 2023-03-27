@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/Components/constants/app_router.dart';
 
 import '../../../Components/components/container_image.dart';
 import '../../../Components/components/material_button.dart';
+import '../../../Components/components/navigator.dart';
 import '../../../Components/styles/colors.dart';
 
 class buildSectionListProduct extends StatelessWidget {
@@ -52,7 +54,9 @@ class buildSectionListProduct extends StatelessWidget {
                   height: 30,
                   backgroundColor: MyColors.primaryColor, data: 'view', style: TextStyle(
                   color: MyColors.white,fontWeight: FontWeight.bold,
-                              ), onPressed: (){}
+                              ), onPressed: (){
+                                navigatorPush(context, pathAppRouter: AppRouter.KCartScreen);
+                              }
                               ),
                         ],
                       ),

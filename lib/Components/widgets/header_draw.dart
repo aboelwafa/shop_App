@@ -11,6 +11,7 @@ class HeaderDraw extends StatelessWidget {
     return Row(
                     children: [
                       myElevatedButton(
+                        borderSideColor: MyColors.fillcolor,
                           backgroundColor: MyColors.white,
                           colorIcon: MyColors.textPrimary,
                           sizeIcon: 25,

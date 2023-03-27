@@ -7,7 +7,8 @@ Widget myElevatedButton({
   Color? colorIcon,
   double? sizeIcon,
   Color? backgroundColor,
-  void Function()? onPressed
+  void Function()? onPressed,
+  required Color borderSideColor,
 })=>ElevatedButton(
                   onPressed: onPressed,
                   style: ElevatedButton.styleFrom(
@@ -16,7 +17,7 @@ Widget myElevatedButton({
                     backgroundColor: backgroundColor,
                     shape:  CircleBorder(
                       side: BorderSide(
-                        color: MyColors.fillcolor,
+                        color: borderSideColor,
                         width: 2.0,
                       )
                     ), //<-- SEE HERE
