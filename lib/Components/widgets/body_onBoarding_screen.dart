@@ -73,7 +73,7 @@ class BodyOnBoardingScreen extends StatelessWidget {
             height: 20,
           ),
           Text(
-            'Enjoy your vacation with our super comfy shoes',
+            'Enjoy your vacation with our super comfort shoes',
             style: TextStyle(color: MyColors.textSecondary, fontSize: 22),
           ),
           const Spacer(),

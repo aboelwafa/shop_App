@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/Components/components/navigator.dart';
 import 'package:shop_app/Components/components/title.dart';
+import 'package:shop_app/Components/constants/app_router.dart';
 import 'package:shop_app/Components/styles/styles.dart';
 
 import '../components/material_button.dart';
@@ -84,7 +86,9 @@ class BodyCartScreen extends StatelessWidget {
                        ),
              ),
                       myButton(backgroundColor: MyColors.primaryColor, 
-                      data: 'Checkout', style: Styles.styleButton, onPressed: (){}),
+                      data: 'Checkout', style: Styles.styleButton, onPressed: (){
+                        navigatorPush(context, pathAppRouter: AppRouter.KCheckoutScreen);
+                      }),
 
           const SizedBox(
             height: 25,

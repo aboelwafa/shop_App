@@ -92,12 +92,17 @@ class BuildListCartProduct extends StatelessWidget {
                   )
                 , 
                 const Spacer(),
-                   myContainerProduct(
-                      height: 100,
-                      width: 70,
-                      radius: 30,
-                      child: Center(child: Icon(Icons.delete_forever_outlined,color: MyColors.white,)),
-                      backgroundColor: MyColors.red),
+                   InkWell(
+                    onTap: (){
+                      showAlertDialog(context);
+                    },
+                     child: myContainerProduct(
+                        height: 100,
+                        width: 70,
+                        radius: 30,
+                        child: Center(child: Icon(Icons.delete_forever_outlined,color: MyColors.white,)),
+                        backgroundColor: MyColors.red),
+                   ),
                   
 
                  
@@ -105,4 +110,34 @@ class BuildListCartProduct extends StatelessWidget {
               ),
               backgroundColor: MyColors.white);
   }
+  showAlertDialog(BuildContext context) async {
+
+  // set up the buttons
+  Widget cancelButton = TextButton(
+    child: Text("Cancel",style: TextStyle(color: MyColors.grayText),),
+    onPressed:  () {},
+  );
+  Widget continueButton = TextButton(
+    child: Text("Remove",style: TextStyle(color: MyColors.red),),
+    onPressed:  () {},
+  );
+
+  // set up the AlertDialog
+  AlertDialog alert = AlertDialog(
+    
+    content:Text( "Are your sure you wanna remove this item?"),
+    actions: [
+      cancelButton,
+      continueButton,
+    ],
+  );
+
+  // show the dialog
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return alert;
+    },
+  );
+}
 }

@@ -11,6 +11,8 @@ import 'package:shop_app/modules/OnBoardingScreen/splash_screen.dart';
 import 'package:shop_app/modules/Search&categroy/search_screen.dart';
 
 import '../../modules/Cart&order/cart_screen.dart';
+import '../../modules/Cart&order/checkout_screen.dart';
+import '../../modules/Cart&order/order_successful.dart';
 import '../../modules/ForgetPassword/forget_password.dart';
 import '../../modules/ForgetPassword/new_password.dart';
 import '../../modules/Home&filter/home_layout.dart';
@@ -30,10 +32,20 @@ abstract class AppRouter{
 static const String KSearchScreen='/Searchcreen';
   static const String KCategoryScreen='/CategoryScreen';
   static const String KCartScreen='/CartScreen';
+    static const String KCheckoutScreen='/CheckoutScreen';
+ static const String KOrderSuccessful='/OrderSuccessful';
 
-//CartScreen
+//OrderSuccessful
   static final  router = GoRouter(
   routes: [
+     GoRoute(
+      path: KOrderSuccessful,
+      builder: (context, state) => const OrderSuccessful(),
+    ),
+     GoRoute(
+      path: KCheckoutScreen,
+      builder: (context, state) => const CheckoutScreen(),
+    ),
     GoRoute(
       path: KSplashScreen,
       builder: (context, state) => const SplashScreen(),
