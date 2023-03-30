@@ -3,6 +3,7 @@ import 'package:shop_app/Components/styles/colors.dart';
 import 'package:shop_app/Components/widgets/custom_appbar_discover.dart';
 
 import '../../../Components/components/container_image.dart';
+import '../../../Components/widgets/custom_app_bar.dart';
 
 class MainSectionCategory extends StatelessWidget {
   const MainSectionCategory({super.key});
@@ -12,13 +13,7 @@ class MainSectionCategory extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CustomAppbarDiscover(title: 'CATEGORY',
-        iconLead: Icons.arrow_back,
-        iconLeadButton: (){
-          Navigator.pop(context);
-        },
-        iconAction: Icons.notifications_none_outlined,
-        ),
+         appbarRow(context,text: 'CATEGORY'),
         const SizedBox(height: 30,),
         
         SizedBox(

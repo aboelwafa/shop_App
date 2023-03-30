@@ -1,5 +1,6 @@
 // ignore_for_file: non_constant_identifier_names, depend_on_referenced_packages
 import 'package:flutter/material.dart';
+import 'package:shop_app/Components/components/navigator.dart';
 import 'package:shop_app/Components/constants/app_router.dart';
 import '../styles/colors.dart';
 import 'package:go_router/go_router.dart';
@@ -51,11 +52,16 @@ class _CustomBottomNavbarState extends State<CustomBottomNavbar> {
                       size: 30,
                       color: MyColors.primaryColor,
                     ),
-                     Icon(
-                      Icons.person,
-                      size: 30,
-                      color: MyColors.primaryColor,
-                    )
+                     InkWell(
+                      onTap: () {
+                        navigatorPush(context, pathAppRouter: AppRouter.KAddressScreen);
+                      },
+                       child: Icon(
+                        Icons.person,
+                        size: 30,
+                        color: MyColors.primaryColor,
+                                         ),
+                     )
           ],
         ));
   }

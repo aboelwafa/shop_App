@@ -7,6 +7,7 @@ import '../components/material_button.dart';
 import '../components/navigator.dart';
 import '../constants/app_router.dart';
 import '../styles/colors.dart';
+import 'custom_app_bar.dart';
 import 'custom_appbar_discover.dart';
 import 'custom_cards_checkout.dart';
 import 'custom_delivery_address_checkout.dart';
@@ -22,14 +23,7 @@ class BodyCheckoutScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomAppbarDiscover(
-            title: 'CHECKOUT',
-            iconLead: Icons.arrow_back,
-            iconLeadButton: () {
-              Navigator.pop(context);
-            },
-            iconAction: Icons.notifications_none_outlined,
-          ),
+           appbarRow(context,text: 'CHECKOUT'),
           const SizedBox(
             height: 20,
           ),

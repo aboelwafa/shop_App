@@ -7,7 +7,7 @@ import 'package:shop_app/Components/styles/styles.dart';
 import '../components/material_button.dart';
 import '../styles/colors.dart';
 import 'build_list_cart_product.dart';
-import 'custom_appbar_discover.dart';
+import 'custom_app_bar.dart';
 
 class BodyCartScreen extends StatelessWidget {
   const BodyCartScreen({super.key});
@@ -19,14 +19,7 @@ class BodyCartScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomAppbarDiscover(
-            title: 'CART',
-            iconLead: Icons.arrow_back,
-            iconLeadButton: () {
-              Navigator.pop(context);
-            },
-            iconAction: Icons.notifications_none_outlined,
-          ),
+          appbarRow(context,text: 'CART'),
           const SizedBox(
             height: 20,
           ),
@@ -97,4 +90,6 @@ class BodyCartScreen extends StatelessWidget {
       ),
     );
   }
+
+ 
 }

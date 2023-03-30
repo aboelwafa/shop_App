@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/Components/widgets/show_alert_massage.dart';
 
 import '../components/container_image.dart';
 import '../components/title.dart';
@@ -94,7 +95,11 @@ class BuildListCartProduct extends StatelessWidget {
                 const Spacer(),
                    InkWell(
                     onTap: (){
-                      showAlertDialog(context);
+                      showAlertDialog(context,
+                      cancel: 'Cancle',
+                      remove: 'Remove',
+                      messge: 'Are your sure you wanna remove this item?'
+                      );
                     },
                      child: myContainerProduct(
                         height: 100,
@@ -110,34 +115,4 @@ class BuildListCartProduct extends StatelessWidget {
               ),
               backgroundColor: MyColors.white);
   }
-  showAlertDialog(BuildContext context) async {
-
-  // set up the buttons
-  Widget cancelButton = TextButton(
-    child: Text("Cancel",style: TextStyle(color: MyColors.grayText),),
-    onPressed:  () {},
-  );
-  Widget continueButton = TextButton(
-    child: Text("Remove",style: TextStyle(color: MyColors.red),),
-    onPressed:  () {},
-  );
-
-  // set up the AlertDialog
-  AlertDialog alert = AlertDialog(
-    
-    content:Text( "Are your sure you wanna remove this item?"),
-    actions: [
-      cancelButton,
-      continueButton,
-    ],
-  );
-
-  // show the dialog
-  showDialog(
-    context: context,
-    builder: (BuildContext context) {
-      return alert;
-    },
-  );
-}
 }

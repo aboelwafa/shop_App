@@ -6,7 +6,8 @@ import '../components/my_textform_field.dart';
 
 Widget usernameField({
  required void Function(String)? onChanged,
- required TextEditingController controller
+ required TextEditingController controller,
+ String hintText='enter your username',
 }) {
     return myTextFormField(
               onChanged:onChanged,
@@ -21,6 +22,6 @@ Widget usernameField({
               keyboardAppearance: Brightness.light,
               fillColor: MyColors.fillcolor,
               hintStyle: Styles.hintStyle,
-              hintText: 'enter your username',
+              hintText: hintText,
             );
   }
